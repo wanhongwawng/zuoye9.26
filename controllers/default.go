@@ -9,10 +9,12 @@ import (
 )
 
 type MainController struct {
-	beego.Controller
+	beego.Controller//匿名字段：
 }
 
 func (c *MainController) Get() {
+	//1，获取请求数据
+
 	c.Data["Website"] = "beego.me"
 	c.Data["Email"] = "astaxie@gmail.com"
 	c.TplName = "index.tpl"
